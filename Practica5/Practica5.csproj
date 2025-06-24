@@ -100,8 +100,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -120,7 +118,6 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="CSS\style.css" />
-    <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="JS\ReservaEntradas.js" />
@@ -198,21 +195,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ListadoComentarios.aspx.cs">
       <DependentUpon>ListadoComentarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -224,13 +207,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TPDataContext.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
