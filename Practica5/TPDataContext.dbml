@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TicketMania" Class="TPDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.Comentarios" Member="Comentarios">
+    <Type Name="Comentarios">
+      <Column Name="IdComentario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DNI" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NombreCompleto" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Comentario" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IdReserva" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Reservas_Comentarios" Member="Reservas" ThisKey="IdReserva" OtherKey="Id" Type="Reservas" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Actividades" Member="Actividades">
+    <Type Name="Actividades">
+      <Column Name="IdActividad" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NombreActividad" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TotalPlazas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Disponible" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="Actividades_Reservas" Member="Reservas" ThisKey="IdActividad" OtherKey="IdActividad" Type="Reservas" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Reservas" Member="Reservas">
+    <Type Name="Reservas">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NombreCompleto" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DNI" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="FechaNacimiento" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IdActividad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Reservas_Comentarios" Member="Comentarios" ThisKey="Id" OtherKey="IdReserva" Type="Comentarios" />
+      <Association Name="Actividades_Reservas" Member="Actividades" ThisKey="IdActividad" OtherKey="IdActividad" Type="Actividades" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

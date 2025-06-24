@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/TPDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c9086d9e-ffa0-4732-b8d6-820bace7db8f" absoluteBounds="8.375, 1.125, 2, 1.9631982421875">
+      <DataClassMoniker Name="/TPDataContext/Comentarios" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f13c41d0-1253-4970-a403-9c14f06d1f01" absoluteBounds="8.39, 1.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="627478ee-ab41-4bfa-82eb-0d17f3ddedd1" absoluteBounds="5.5, 1.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/TPDataContext/Actividades" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d7d736f4-31e8-4297-87a3-f42bb50f60f3" absoluteBounds="5.515, 1.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7080f402-efc4-4eb7-8c4c-d894d5a23958" absoluteBounds="6.875, 4, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/TPDataContext/Reservas" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e8ce10d4-bf8d-4107-9db1-f36b0bc8a343" absoluteBounds="6.89, 4.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.625 : 4); (8.625 : 3.0881982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TPDataContext/Reservas/Reservas_Comentarios" />
+      <nodes>
+        <classShapeMoniker Id="7080f402-efc4-4eb7-8c4c-d894d5a23958" />
+        <classShapeMoniker Id="c9086d9e-ffa0-4732-b8d6-820bace7db8f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.1875 : 3.14589680989583); (7.1875 : 4)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TPDataContext/Actividades/Actividades_Reservas" />
+      <nodes>
+        <classShapeMoniker Id="627478ee-ab41-4bfa-82eb-0d17f3ddedd1" />
+        <classShapeMoniker Id="7080f402-efc4-4eb7-8c4c-d894d5a23958" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
